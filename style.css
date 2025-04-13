@@ -7,7 +7,7 @@
 body {
     font-style: normal;
     line-height: normal;
-    font-family: Rubik, sans-serif; /* sans-serif - fallback */
+    font-family: Rubik, Montserrat, Lato, sans-serif; /* sans-serif - fallback */
 }
 
 section {
@@ -25,20 +25,40 @@ ul {
     box-shadow: 20px 20px 40px 0 rgba(81, 91, 117, 0.25);
     background: #fff;
     padding: 60px 0 70px;
+    display: flex;
 }
 
 .product-image-block{
     border-right: 2px solid rgba(20,20,20,0.15);
-    width: 540px;
+    min-width: 540px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-image-wrapper {
+    flex-grow: 1;  /* будет занимать все свободное пространство в своем родителе */
+    /* выравниваем главное изображение горизонтально и вертикально по центру */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.previews-wrapper {
+    display: flex;
+    justify-content: center;  /* выравниваем горизонтально по центру */
+    gap: 60px;
 }
 
 .preview{
     width: 80px;
     height: 80px;
+    display: flex;
+    justify-content: center;  /* выравниваем горизонтально по центру */
+    align-items: center;
 }
 
 .preview.selected{
-    box-shadow: 8px 8px 16px 0px rgba(81, 91, 117, 0.25);
+    box-shadow: 8px 8px 16px 0 rgba(81, 91, 117, 0.25);
 }
 
 .product-info-block{
@@ -50,7 +70,6 @@ ul {
     font-weight: 700;
     font-size: 38px;
     font-style: normal;
-    font-family: Montserrat;
     letter-spacing: 0.01em;
     line-height: normal;
     color: rgba(20, 20, 20, 0.9);
@@ -58,7 +77,6 @@ ul {
 
 .subtitle{
     /*font-family: var(--font-family);*/
-    font-family: Lato;
     font-weight: 400;
     font-size: 16px;
     font-style: normal;
@@ -70,7 +88,6 @@ ul {
 
 .text{
     /*font-family: var(--second-family);*/
-    font-family: Rubik;
     font-weight: 400;
     font-size: 18px;
     font-style: normal;
@@ -89,7 +106,6 @@ ul {
     font-weight: 400;
     font-size: 16px;
     font-style: normal;
-    font-family: Lato;
     line-height: normal;
     letter-spacing: 0.01em;
     text-transform: uppercase;
@@ -124,7 +140,7 @@ li.selected {
     width: 30px;
     height: 30px;
     padding: 7px;
-    box-shadow: 2px 2px 6px 0px rgba(81, 91, 117, 0.25);
+    box-shadow: 2px 2px 6px 0 rgba(81, 91, 117, 0.25);
     border-radius: 50%;
 }
 
@@ -132,7 +148,6 @@ li.selected {
     width: 80px; /* ширина выпадающего списка */
 
     /* стили для текста выпадающего списка*/
-    font-family: Rubik;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -150,12 +165,11 @@ li.selected {
 
 .price {
     color: rgba(20, 20, 20, 0.80);
-    font-family: Rubik;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: normal
-    letter-spacing: 0.2px;
+    line-height: normal;
+    letter-spacing: 0.01em;
     text-transform: uppercase;
 }
 
@@ -167,11 +181,10 @@ li.selected {
 
     /* свойства для текста внутри кнопки */
     color: #FFF;
-    font-family: Rubik;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: normal
-    letter-spacing: 0.18px;
+    line-height: normal;
+    letter-spacing: 0.018em;
     margin-top: 75px;
 }
