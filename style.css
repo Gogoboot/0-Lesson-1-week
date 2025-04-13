@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+body {
+    font-style: normal;
+    line-height: normal;
+    font-family: Rubik, sans-serif; /* sans-serif - fallback */
+}
+
 section {
     background-color: #eff2f9;
     height: 100vh;
@@ -59,6 +65,7 @@ ul {
     letter-spacing: 0.01em;
     line-height: normal;
     color: rgba(20, 20, 20, 0.4);
+    margin-bottom: 60px;
 }
 
 .text{
@@ -70,6 +77,11 @@ ul {
     line-height: 30px;
     letter-spacing: 0.01em;
     color: rgba(20, 20, 20, 0.7);
+    margin-bottom: 65px;
+}
+
+.colors {
+    margin-bottom: 65px;
 }
 
 .title{
@@ -82,8 +94,84 @@ ul {
     letter-spacing: 0.01em;
     text-transform: uppercase;
     color: rgba(20, 20, 20, 0.4);
+    margin-bottom: 20px;
 }
 
 .circle{
+    width: 16px;
+    height: 16px;
+    filter: drop-shadow(2px 2px 4px rgba(81, 91, 117, 0.25));
     border-radius: 50%;
+}
+
+.blue {
+    background-color: #013C7D;
+}
+.green {
+    background-color: #63CBA7;
+}
+.red {
+    background-color: #D52F29;
+}
+.black {
+    background-color: #141414;
+}
+.yellow {
+    background-color: #F2C723;
+}
+
+li.selected {
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    box-shadow: 2px 2px 6px 0px rgba(81, 91, 117, 0.25);
+    border-radius: 50%;
+}
+
+.quantity {
+    width: 80px; /* ширина выпадающего списка */
+
+    /* стили для текста выпадающего списка*/
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: rgba(20, 20, 20, 0.8);
+
+    border: none; /* убираем границу */
+    appearance: none; /* убираем стрелку, которую браузер отображает по умолчанию */
+
+    /* устанавливаем свою стрелку */
+    background-image: url("./assets/images/ph_caret-down-bold.svg");
+    background-repeat: no-repeat;
+    background-position: right 0 top 50%;
+}
+
+.price {
+    color: rgba(20, 20, 20, 0.80);
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}
+
+.btn {
+    /* свойства для формы */
+    height: 70px;
+    width: 100%;
+    background: #141414;
+
+    /* свойства для текста внутри кнопки */
+    color: #FFF;
+    font-family: Rubik;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal
+    letter-spacing: 0.18px;
+    margin-top: 75px;
 }
